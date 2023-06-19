@@ -1,0 +1,30 @@
+.menu-principal-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+}
+
+.menu-principal-wrapper .logo-wrapper h1{
+    font-weight: bold;
+}
+
+.menu-wrapper li {
+    font-size: 20px;
+}
+
+.menu-principal-wrapper .menu-wrapper {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-principal-wrapper .menu-wrapper li a {
+    text-decoration: none;
+    color: #fff;
+}
