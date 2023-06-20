@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import './App.css'
 import Header from './components/Header/Header';
+import Banner from './components/Banner/Banner';
+import Main from './components/Main/Main';
+import Footer from './components/Footer/Footer';
+import Map from './components/Map/Map';
 
 function App() {
   const menu  = [
@@ -15,16 +19,17 @@ function App() {
       path: '/contato'
     }
   ]
+
+
   return (
     <>
       <Header menu={menu}/>
-      <ul>
-        {menu.map(item => {
-          return(
-            <li key={item.id}>{item.label}</li>
-          );
-        })}
-      </ul>
+      <Banner subtitle='Escolha a melhor bicicleta para você' title='Nossos produtos'/>
+      <Main/>
+      <Main/>
+      <Main/>
+      <Footer/>
+      <Map/>
     </>
   )
 }

@@ -1,0 +1,21 @@
+.banner-principal-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: #fff;
+    background-color: #111111;
+}
+
+.subtitle-wrapper {
+    color: #dfdfdf;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.title-wrapper {
+    text-transform: lowercase;
+}
+
+.text-yellow {
+    color: yellow;
+}

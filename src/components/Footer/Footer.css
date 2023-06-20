@@ -1,0 +1,14 @@
+.footer-wrapper {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    height: 250px;
+}
+
+.footer-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    border-right: 1px solid blue;
+}
