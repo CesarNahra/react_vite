@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
-import Map from './components/Map/Map';
 
 function App() {
   const menu  = [
@@ -29,7 +28,6 @@ function App() {
       <Main/>
       <Main/>
       <Footer/>
-      <Map/>
     </>
   )
 }
