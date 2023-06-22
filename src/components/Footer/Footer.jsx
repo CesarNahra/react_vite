@@ -29,7 +29,7 @@ function Footer() {
                     <li>Produtos</li>
                     <li>Contato</li>
                     <li>FAQ</li>
-                    <li>Informações</li>
+                    <li>Termos e Condições</li>
                 </ul>
             </div>
         </div>
