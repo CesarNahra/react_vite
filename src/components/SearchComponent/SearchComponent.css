@@ -1,0 +1,21 @@
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: red;
+}
+
+.search-wrapper input {
+    padding: 20px;
+    width: 100%;
+    margin-right: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.search-wrapper .search-button {
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+}

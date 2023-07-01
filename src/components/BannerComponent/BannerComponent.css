@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 20px;
     color: #fff;
-    background-color: #111111;
+    background-color: #111;
 }
 
 .subtitle-wrapper {
@@ -13,7 +13,7 @@
 }
 
 .title-wrapper {
-    text-transform: lowercase;
+    text-transform: capitalize;
 }
 
 .text-yellow {

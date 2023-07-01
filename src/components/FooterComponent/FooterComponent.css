@@ -3,6 +3,7 @@
     color: #fff;
     height: 320px;
     padding: 20px;
+    border-top: 1px solid #ccc;
 }
 
 .logo-wrapper {
@@ -32,7 +33,7 @@
 }
 
 .infos-links li {
-    list-style-type: none;
+    list-style: none;
     margin-bottom: 20px;
 }
 

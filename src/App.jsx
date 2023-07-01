@@ -1,33 +1,22 @@
-import { useState } from 'react';
 import './App.css'
-import Header from './components/Header/Header';
-import Banner from './components/Banner/Banner';
-import Main from './components/Main/Main';
-import Footer from './components/Footer/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HomePage } from './pages/HomePage/HomePage';
+import { ContactPage } from './pages/ContactPage/ContactPage';
+import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
+import { FaqPage } from './pages/FaqPage/FagPage';
 
 function App() {
-  const menu  = [
-    {
-      id: 1,
-      label: 'Produtos',
-      path: '/produtos'
-    },
-    {
-      id: 2,
-      label: 'Contato',
-      path: '/contato'
-    }
-  ]
-
 
   return (
     <>
-      <Header menu={menu}/>
-      <Banner subtitle='Escolha a melhor bicicleta para você' title='Nossos produtos'/>
-      <Main/>
-      <Main/>
-      <Main/>
-      <Footer/>
+      <Router>
+        <Routes>
+          <Route index element={<HomePage/>}/>
+          <Route path='contact' element={<ContactPage/>}/>
+          <Route path='faq' element={<FaqPage/>}/>
+          <Route path='*' element={<NotFoundPage/>}/>
+        </Routes>
+      </Router>
     </>
   )
 }
