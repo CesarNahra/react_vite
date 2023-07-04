@@ -10,10 +10,6 @@ export const HomePage = () => {
             <HeaderComponent/>
             <BannerComponent subtitle='Escolha a melhor bicicleta para você' title='Nossos produtos'/>
             <MainComponent/>
-            {/* <MenuComponent/>
-            <div>
-                HomePage is render
-            </div> */}
             <FooterComponent/>
         </>
     );

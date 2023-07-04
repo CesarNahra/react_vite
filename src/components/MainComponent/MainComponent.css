@@ -38,7 +38,7 @@
 }
 
 .product-features-wrapper li {
-    list-style: circle;
+    list-style: none;
 }
 
 .btn-buy-wrapper {

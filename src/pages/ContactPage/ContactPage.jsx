@@ -10,10 +10,6 @@ export const ContactPage = () => {
         <>
             <HeaderComponent/>
             <BannerComponent subtitle='Entre em contato conosco' title='Contato'/>
-            {/* <MenuComponent/>
-            <div>
-                ContactPage is render
-            </div> */}
             <FormComponent/>
             <MapComponent/>
             <FooterComponent/>

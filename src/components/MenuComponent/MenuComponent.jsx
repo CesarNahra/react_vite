@@ -7,7 +7,6 @@ const MenuComponent = () => {
                 <li><Link to={'/'}>Home</Link></li>
                 <li><Link to={'/contact'}>Contato</Link></li>
                 <li><Link to ={'/faq'}>FAQ</Link></li>
-                <li><Link to={'/batata'}>Página não encontrada</Link></li>
             </ul>
         </>
     );

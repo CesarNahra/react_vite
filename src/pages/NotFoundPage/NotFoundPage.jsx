@@ -1,6 +1,7 @@
 import { HeaderComponent } from '../../components/HeaderComponent/HeaderComponent';
 import { FooterComponent } from '../../components/FooterComponent/FooterComponent';
 import { BannerComponent } from '../../components/BannerComponent/BannerComponent';
+import { NotFoundComponent } from '../../components/NotFoundComponent/NotFoundComponent';
 
 export const NotFoundPage = () => {
     
@@ -8,6 +9,7 @@ export const NotFoundPage = () => {
         <>
             <HeaderComponent/>
             <BannerComponent subtitle='VIXI. Não encontramos essa página' title='Oppsss'/>
+            <NotFoundComponent/>
             <FooterComponent/>
         </>
     );
