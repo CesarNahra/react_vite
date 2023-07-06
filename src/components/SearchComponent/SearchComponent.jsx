@@ -1,12 +1,13 @@
-import './SearchComponent.css';
+import { SearchButton, SearchQuery, SearchWrapper } from "./SearchComponent.style";
+
 
 export const SearchComponent = () => {
     return(
         <>
-            <div className="search-wrapper">
-                <input type="text" name="search" id="search" placeholder='Pesquise alguma coisa'/>
-                <button className='search-button' type="button"><i className="bi bi-search"></i></button>
-            </div>
+            <SearchWrapper>
+                <SearchQuery placeholder="Digite alguma coisa aqui"/>
+                <SearchButton><i className="bi bi-search"></i></SearchButton>
+            </SearchWrapper>
         </>
     );
 }

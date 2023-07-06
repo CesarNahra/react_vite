@@ -5,6 +5,7 @@ import { QuestionComponent } from "../../components/QuestionComponent/QuestionCo
 import { SearchComponent } from '../../components/SearchComponent/SearchComponent';
 
 export const FaqPage = () => {
+    
     return(
         <>
             <HeaderComponent/>

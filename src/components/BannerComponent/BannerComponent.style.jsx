@@ -1,21 +1,23 @@
-.banner-principal-wrapper {
+import styled from 'styled-components';
+
+export const BannerPrincipalWrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 20px;
     color: #fff;
     background-color: #111;
-}
+`
 
-.subtitle-wrapper {
+export const SubtitleWrapper = styled.h2`
     color: #dfdfdf;
     font-size: 20px;
     text-transform: uppercase;
-}
+`
 
-.title-wrapper {
+export const TitleWrapper = styled.h1`
     text-transform: capitalize;
-}
+`
 
-.text-yellow {
+export const TextYellow = styled.span`
     color: yellow;
-}
+`

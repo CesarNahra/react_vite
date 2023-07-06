@@ -1,4 +1,6 @@
-.not-found-wrapper {
+import styled from 'styled-components';
+
+export const NotFoundWrapper = styled.div`
     display: flex;
     align-items: center;
     width: 100vw;
@@ -9,4 +11,4 @@
     color: #fff;
     text-transform: uppercase;
     font-size: 30px;
-}
+`

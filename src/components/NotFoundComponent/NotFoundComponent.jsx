@@ -1,9 +1,9 @@
-import './NotFoundComponent.css';
+import { NotFoundWrapper } from './NotFoundComponent.style';
 
 export const NotFoundComponent = () => {
     return(
-        <div className='not-found-wrapper'>
+        <NotFoundWrapper>
             <p>Não Encontramos essa página, lamentamos em não poder ajudar</p>
-        </div>
+        </NotFoundWrapper>
     );
 }

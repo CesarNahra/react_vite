@@ -1,37 +1,20 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './MainComponent.css';
-import './ModalComponent.css';
+import { ModalContext } from '../../contexts/ModalContext/ModalContext';
+import { MainWrapper, ProductImageWrapper, ProductInfoWrapper, ProductWrapper } from './MainComponent.style';
 
 export const MainComponent = () => {
 
-    const [showModal, setShowModal] = useState(false);
+    const { setShow, setData } = useContext(ModalContext);
 
     const handleShowModal = () => {
-        setShowModal(!showModal);
+        setData({
+            title: 'modal exibido a partir do card',
+            description: 'cesar@gmail.com',
+        });
+        setShow(true);
     }
 
-    const ModalComponent = () => {
-        return (
-            <div className="modal-wrapper">
-                <div className="product-wrapper-modal">
-                    <div className="product-image-wrapper-modal">
-                        <span className="product-price-modal">R$ 1000</span>
-                    </div>
-                    <div className="product-info-wrapper-modal">
-                        <h3 className="product-name-wrapper-modal">Produto 1</h3>
-                        <p className="product-description-wrapper-modal">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <ul className="product-features-wrapper-modal">
-                            <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
-                            <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
-                            <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
-                            <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
-                        </ul>
-                        <button type='button' className='btn-buy-wrapper-modal' onClick={handleShowModal}>Fechar modal</button>
-                    </div>
-                </div>
-            </div>
-        );
-    }
 
     const products = [
         {
@@ -56,24 +39,27 @@ export const MainComponent = () => {
 
 
     return (
-        <div className="main-wrapper">
-            <div className="product-wrapper">
-                <div className="product-image-wrapper">
-                    <span className="product-price-wrapper">R$ 1.000</span>
-                </div>
-                <div className="product-info-wrapper">
-                    <h3 className="product-name-wrapper">Produto 1</h3>
-                    <p className="product-description-wrapper">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <ul className="product-features-wrapper">
-                        <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
-                        <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
-                        <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
-                        <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
-                    </ul>
-                    {showModal && <ModalComponent />}
-                    <button type='button' className="btn-buy-wrapper" onClick={handleShowModal}>Mais sobre</button>
-                </div>
-            </div>
-        </div>
+        <MainWrapper>
+            {products.map(product => {
+                return (
+                    <ProductWrapper>
+                        <ProductImageWrapper>
+                            <span className="product-price-wrapper">{product.price}</span>
+                        </ProductImageWrapper>
+                        <ProductInfoWrapper>
+                            <h3 className="product-name-wrapper">{product.name}</h3>
+                            <p className="product-description-wrapper">{product.description}</p>
+                            <ul className="product-features-wrapper">
+                                <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
+                                <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
+                                <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
+                                <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
+                            </ul>
+                            <button type='button' className="btn-buy-wrapper" onClick={handleShowModal}>Mais sobre</button>
+                        </ProductInfoWrapper>
+                    </ProductWrapper>
+                )
+            })}
+        </MainWrapper>
     );
 }
