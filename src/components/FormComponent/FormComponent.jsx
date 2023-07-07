@@ -1,9 +1,8 @@
-import './FormComponent.css';
+import { FormWrapper } from './FormComponent.style';
 
 export const FormComponent = () => {
     return(
-      <div className='form-wrapper'>
-        <form className="form-container">
+        <FormWrapper>
           <div className="row">
             <div className="form-label-wrapper col-sm-6">
               <input type="text" name="name" id="name" placeholder='Nome'/>
@@ -17,7 +16,6 @@ export const FormComponent = () => {
             <textarea className='text-label' name="msg" id="msg" placeholder='Digite a sua mensagem'></textarea>
             <p className='max-letter'>0 de 500 caracteres</p>
           </div>
-        </form>
-      </div>
+        </FormWrapper>
     );
 }

@@ -1,17 +1,13 @@
 import { useContext, useState } from 'react';
-import './MainComponent.css';
 import { ModalContext } from '../../contexts/ModalContext/ModalContext';
-import { MainWrapper, ProductImageWrapper, ProductInfoWrapper, ProductWrapper } from './MainComponent.style';
+import { BuyBtnWrapper, MainWrapper, ProductDescriptionWrapper, ProductFeaturesWrapper, ProductImageWrapper, ProductInfoWrapper, ProductNameWrapper, ProductPriceWrapper, ProductWrapper } from './MainComponent.style';
 
 export const MainComponent = () => {
 
     const { setShow, setData } = useContext(ModalContext);
 
     const handleShowModal = () => {
-        setData({
-            title: 'modal exibido a partir do card',
-            description: 'cesar@gmail.com',
-        });
+        setData(products);
         setShow(true);
     }
 
@@ -23,18 +19,18 @@ export const MainComponent = () => {
             price: 2000,
             description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
         },
-        {
-            id: 2,
-            name: 'Produto 2',
-            price: 5000,
-            description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
-        },
-        {
-            id: 3,
-            name: 'Produto 3',
-            price: 10000,
-            description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
-        },
+        // {
+        //     id: 2,
+        //     name: 'Produto 2',
+        //     price: 5000,
+        //     description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+        // },
+        // {
+        //     id: 3,
+        //     name: 'Produto 3',
+        //     price: 10000,
+        //     description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+        // },
     ]
 
 
@@ -44,18 +40,18 @@ export const MainComponent = () => {
                 return (
                     <ProductWrapper>
                         <ProductImageWrapper>
-                            <span className="product-price-wrapper">{product.price}</span>
+                            <ProductPriceWrapper>{product.price}</ProductPriceWrapper>
                         </ProductImageWrapper>
                         <ProductInfoWrapper>
-                            <h3 className="product-name-wrapper">{product.name}</h3>
-                            <p className="product-description-wrapper">{product.description}</p>
-                            <ul className="product-features-wrapper">
+                            <ProductNameWrapper>{product.name}</ProductNameWrapper>
+                            <ProductDescriptionWrapper>{product.description}</ProductDescriptionWrapper>
+                            <ProductFeaturesWrapper>
                                 <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
                                 <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
                                 <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
                                 <li><i className="bi bi-bookmark-fill"></i>Olá Mundo</li>
-                            </ul>
-                            <button type='button' className="btn-buy-wrapper" onClick={handleShowModal}>Mais sobre</button>
+                            </ProductFeaturesWrapper>
+                            <BuyBtnWrapper onClick={handleShowModal}>Mais sobre</BuyBtnWrapper>
                         </ProductInfoWrapper>
                     </ProductWrapper>
                 )

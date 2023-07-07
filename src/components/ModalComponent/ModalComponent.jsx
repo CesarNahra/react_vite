@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { ModalContext } from "../../contexts/ModalContext/ModalContext";
-import './ModalComponent.css';
 
 export const ModalComponent = () => {
 
@@ -9,15 +8,16 @@ export const ModalComponent = () => {
     const handleCloseModal = () => {
         setShow(false);
         setData({
-            title: null,
+            name: null,
             description: null,
+            price: null,
         })
     }
 
     return(
         <>
-            <h2>{data.title || 'título genérico'}</h2>
-            <p>{data.description || 'lorem ipsum'}</p>
+            <h2>{data.name || 'genérico'}</h2>
+            <p>{data.price}</p>
             <button type='button' className='btn-buy-wrapper-modal' onClick={handleCloseModal}>Fechar modal</button>
         </>
     );

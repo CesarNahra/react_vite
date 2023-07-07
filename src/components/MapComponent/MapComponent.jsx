@@ -1,13 +1,13 @@
-import './MapComponent.css';
+import { CityLocationWrapper, MapImageWrapper, MapInfoWrapper, MapWrapper, OpeningHoursWrapper } from './MapComponent.style';
 
 export const MapComponent = () => {
     return(
-        <div className="map-wrapper">
+        <MapWrapper>
             <h2>Venha conhecer a nossa loja <span className="text-yellow">.</span></h2>
-            <div className="map-image-wrapper"></div>
-            <div className="map-info-wrapper">
+            <MapImageWrapper></MapImageWrapper>
+            <MapInfoWrapper>
                 <h3 className="store-wrapper">Matriz</h3>
-                <div className="city-location-wrapper">
+                <CityLocationWrapper>
                     <ul>
                         <li className='street-wrapper'>Rua dos pike</li>
                         <li className='location-wrapper'>Belo Horizonte, Minas Gerais</li>
@@ -18,11 +18,11 @@ export const MapComponent = () => {
                             <li className='email-wrapper'>contato@contato.minhaempresa.com</li>
                         </ul>
                     </div>
-                </div>
-                <div className="opening-hours-wrapper">
+                </CityLocationWrapper>
+                <OpeningHoursWrapper>
                     <p>Aberto de 10000 a 200000</p>
-                </div>
-            </div>
-        </div>
+                </OpeningHoursWrapper>
+            </MapInfoWrapper>
+        </MapWrapper>
     );
 }

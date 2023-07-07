@@ -4,19 +4,13 @@ import PropTypes from 'prop-types';
 export const ModalContext = createContext({
     show: false,
     setShow: () => {},
-    data: {
-        title: '',
-        description: '',
-    },
+    data: {},
     setData: () => {},
 });
 
 export const ModalProvider = ({children}) => {
     const [show, setShow] = useState(false);
-    const [data, setData] = useState({
-        title: null,
-        description: null,
-    });
+    const [data, setData] = useState({});
 
     return(
         <>
